@@ -1,3 +1,19 @@
+<?php
+    // Get data from form
+    $product_description = filter_input(INPUT_POST, 'product_desctiption');
+    $list_price = filter_input(INPUT_POST, 'list_price');
+    $discount_percent = filter_input(INPUT_POST, 'discount_percent');
+    
+    // Calculate the discount and discounted price
+    $discount = $list_price * $discount_percent * .01;
+    $discount_price = $list_price - $discount;
+    
+    // Apply currency formatting
+    $list_price_f = "$".number_format($list_price, 2);
+    $discount_percent_f = $discount_percent."$";
+    $discount_f = "$".number_format($discount, 2);
+    $discount_price_f = "$".number_format($discount_price, 2);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,22 +22,22 @@
 </head>
 <body>
     <main>
-        <h1>This page is under construction</h1>
+        <h1>Here is your discount</h1>
 
         <label>Product Description:</label>
-        <span><?php echo ''; ?></span><br>
+        <span><?php echo htmlspecialchars($product_desctiption); ?></span><br>
 
         <label>List Price:</label>
-        <span><?php echo ''; ?></span><br>
+        <span><?php echo htmlspecialchars($list_price_f); ?></span><br>
 
         <label>Standard Discount:</label>
-        <span><?php echo ''; ?></span><br>
+        <span><?php echo htmlspecialchars($discount_percent_f); ?></span><br>
 
         <label>Discount Amount:</label>
-        <span><?php echo ''; ?></span><br>
+        <span><?php echo $discount_f; ?></span><br>
 
         <label>Discount Price:</label>
-        <span><?php echo ''; ?></span><br>
+        <span><?php echo $discount_price_f; ?></span><br>
     </main>
 </body>
 </html>
