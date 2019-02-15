@@ -1,0 +1,37 @@
+/* the styles for the html elements */
+html {
+    background-color: white;
+}
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 2em;
+    /*     padding: 1em; */
+    background-color: aliceblue;
+    border-style: solid;
+    border-width: 0.5em;
+    border-radius: 30px;
+    border-color: lightblue;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 100px) repeat(4, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    grid-template-areas: 
+        /* 1    2    3    4    5    6 */
+        'bann bann head head head head'
+        'navi navi cont cont cont cont'
+        'foot foot cont cont cont cont';
+    column-gap: .5em;
+}
+.head {
+    grid-area: head;
+}
+.cont {
+    grid-area: cont;
+}
+.foot {
+    grid-area: foot;
+}
+.bann {
+    grid-area: bann;
+}
