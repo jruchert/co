@@ -1,4 +1,4 @@
-<?php
+git <?php
 // Returns the smallest number that can be represented
 // using php when the passed number is continually
 // divided by two

@@ -1,7 +1,7 @@
 <?php
 $prompt = 'Type in the number that you woule like to evaluate';
 $divisor = 2;
-require 'halved.php';
+require 'functions.php';
 ?>
 <!--<!DOCTYPE html>
 <html lang='en'>
