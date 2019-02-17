@@ -11,6 +11,7 @@ body {
     border-width: 0.5em;
     border-radius: 30px;
     border-color: lightblue;
+    min-width: 700px;
 }
 .container {
     display: grid;

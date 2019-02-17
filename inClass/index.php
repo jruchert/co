@@ -1,6 +1,8 @@
 <?php
+session_name('main');
+session_start();
 require_once 'global/global.php';
-$header = 'main';
+$header = session_name();
 ?>
 <!DOCTYPE html>
 <html lang='en'>

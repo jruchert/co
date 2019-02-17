@@ -1,6 +1,13 @@
 <?php
+// session_unset();
+session_destroy();
 require_once '../global/global.php';
-$header = 'loop';
+session_name('loop');
+session_start();
+$_SESSION['sum'] = 0;
+$_SESSION['count'] = 0;
+$_SESSION['num'] = 0;
+$header = session_name();
 ?>
 <!DOCTYPE html>
 <html lang='en'>
@@ -15,7 +22,11 @@ $header = 'loop';
                 <div class="navi">
                     <?php echo render_nav($header); ?>
                 </div>
-                <div class="cont"><?php require 'content/while/form.php'; ?></div>
+                <div class="cont">
+                    <?php 
+                    require_once 'content/while/form.php';
+                    ?>
+                </div>
                 <div class="foot">
                     <?php echo date('l jS'), '<br>', date('F Y'), '<br>'; ?>
                     Charles Oroko

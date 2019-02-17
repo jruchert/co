@@ -1,33 +1,40 @@
 <?php
-$prompt = 'Type in the number that you woule like to evaluate';
-$divisor = 2;
-require 'functions.php';
+session_name('loop');
+session_start();
+
+$prompt1 = 'Type in a number. It will be divided by 2 until the computer can no longer represent the result.';
+$prompt2 = 'The sum of all the results and the input should tend to double the input.'
 ?>
-<!--<!DOCTYPE html>
-<html lang='en'>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>In Class Assignments</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="styles/cont.css" />
-    </head>
-    <body>
-        <main>
-            <div class="container">
-                <div class="bann">Menu</div>
-                <div class="head">
-                    <h1><?php //echo render_header($header); ?></h1>
-                </div>
-                <div class="navi">
-                    <?php //echo render_nav($header); ?>
-                </div>
-                <div class="cont">Main stuff</div>
-                <div class="foot">
-                    <?php //echo date('l jS'), '<br>', date('F Y'), '<br>'; ?>
-                    Charles Oroko
-                </div>
-            </div>
-        </main>
-    </body>
-</html>-->
+<form action="" method="post" id="form">
+    <label>
+        <?php echo $prompt1; echo '<br>'; echo $prompt2; ?></label>
+    <p />
+    <input type="text" name="num" >
+    <label>&nbsp;
+    </label>
+    <input type="submit" value="Evaluate">
+    <br>
+</form>
+<?php
+if (isset($_POST['num'])) {
+    $_SESSION['num'] = $_POST['num'];
+}
+require_once 'answer.php';
+[$sum, $count] = [$_SESSION['sum'], $_SESSION['count']];
+?>
+<ul>
+    <li>
+        <?php 
+        if ($sum == 0) {
+            echo 'Please enter a number that is not zero.';
+        } else {
+            echo 'The sum of all the numbers found is ', $sum;
+        }
+        ?>
+    </li>
+    <li>
+        <?php
+        echo 'The number of times divided by two is ', $count;
+        ?>
+    </li>
+</ul>
