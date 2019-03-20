@@ -48,7 +48,7 @@ $statement->closeCursor();
             <label>&nbsp;</label>
             <input type="submit" value="Add Product"><br>
         </form>
-        <p><a href="index.php">View Product List</a></p>
+        <p><a href="main.php">View Product List</a></p>
     </main>
 
     <footer>

@@ -15,7 +15,9 @@ $header = 'test';
                 <div class="navi">
                     <?php echo render_nav($header); ?>
                 </div>
-                <div class="cont">Main stuff</div>
+                <div class="cont">
+                    <?php require_once "content/test/form.php"; ?>
+                </div>
                 <div class="foot">
                     <?php echo date('l jS'), '<br>', date('F Y'), '<br>'; ?>
                     Charles Oroko

@@ -7,8 +7,8 @@ function render_header($header) {
         case 'pets':
             return 'Welcome to the Pet Store!';
             break;
-        case 'rand':
-            return 'Randomizer';
+        case 'array':
+            return 'Random Number Array';
             break;
         case 'loop':
             return "You Can't Get There From Here!";
@@ -29,7 +29,7 @@ function render_nav($header) {
     <li><a class="active" href="index.php">Home</a></li>
     <li><a href="pages/while.php">While Loop</a></li>
     <li><a href="pages/pet.php">Pet Store</a></li>
-    <li><a href="pages/random.php">Random</a></li>
+    <li><a href="pages/array.php">Array</a></li>
     <li><a href="pages/test.php">Test</a></li>
 </ul>
 ';
@@ -39,16 +39,16 @@ function render_nav($header) {
     <li><a href="../index.php">Home</a></li>
     <li><a href="while.php">While Loop</a></li>
     <li><a class="active" href="pet.php">Pet Store</a></li>
-    <li><a href="random.php">Random</a></li>
+    <li><a href="array.php">Array</a></li>
 </ul>
 ';
             break;
-        case 'rand':
+        case 'array':
             return '<ul>
     <li><a href="../index.php">Home</a></li>
     <li><a href="while.php">While Loop</a></li>
     <li><a href="pet.php">Pet Store</a></li>
-    <li><a class="active" href="random.php">Random</a></li>
+    <li><a class="active" href="array.php">Array</a></li>
 
 </ul>
 ';
@@ -58,7 +58,7 @@ function render_nav($header) {
     <li><a href="../index.php">Home</a></li>
     <li><a class="active" href="while.php">While Loop</a></li>
     <li><a href="pet.php">Pet Store</a></li>
-    <li><a href="random.php">Random</a></li>
+    <li><a href="array.php">Array</a></li>
 </ul>
 ';
             break;

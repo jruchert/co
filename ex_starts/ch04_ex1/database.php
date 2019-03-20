@@ -1,5 +1,5 @@
 <?php
-    $dsn = 'mysql:host=db;dbname=my_guitar_shop1';
+    $dsn = 'mysql:host=db;dbname=co_guitar_shop';
     $username = 'c.oroko';
     $password = 'lacrimosa';
 

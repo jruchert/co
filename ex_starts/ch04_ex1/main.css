@@ -22,6 +22,20 @@ header h1 {
 main {
     margin: 0;
 }
+/* form stuff */
+form {
+    display: table;
+}
+p {
+    display: table-row;
+}
+label {
+    display: table-cell;
+}
+input {
+    display: table-cell;
+}
+/* end form stuff */
 aside {
     float: left;
     width: 150px;
